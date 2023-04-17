@@ -1,0 +1,121 @@
+/* body{
+    background-image:linear-gradient(skyblue,white,pink);
+} */
+#form{
+
+    margin:auto;
+    margin-top:50px;
+    width:300px;
+    padding:20px;
+    background-color: rgba(223, 159, 159, 0.555);
+    box-shadow: 0px 5px 15px black;
+    border-radius:8px;
+    font-size:15px;
+    animation-name:form-animate;
+    animation-duration: 3s;
+}
+
+#form:hover{
+    box-shadow: 0px 0px 5px black;
+}
+
+ /* animating the form */
+@keyframes form-animate {
+    0%{
+        transform: scale(0.5,0.5);
+    }
+    50%{
+        transfrom:scale(1.5,1.5);
+    }
+    100%{
+        transform:scale(1,1);
+    }
+    
+}
+
+#form h1{
+    color:black;
+    text-align:center;
+    text-shadow:2px 2px 5px navy,2px 2px 5px whitesmoke;
+    animation-name:heading;
+    animation-duration: 2s;
+    animation-delay:3s;
+}
+
+ /* adding hover effect to heading */
+
+ #form h1:hover{
+    text-shadow:2px 2px 5px red,2px 2px 5px whitesmoke;
+}
+@keyframes heading {
+ from{transform: scale(0.25,0.25);}
+ to{transform: scale(1,1);}
+}
+
+#form button{
+    padding:10px;
+    margin:auto;
+    margin-top:10px;
+    width:100%;
+    border:none;
+    background-color: black;
+    color:white;
+    cursor:pointer;
+    transition:border-radius,background-color 0.5s;
+}
+#form button:hover{
+    background-color: rgb(99, 69, 168);
+    border-radius:5px;
+}
+
+
+
+.input-control{
+    display:flex;
+    flex-direction:column;
+}
+.input-control input{
+    border:2px solid rgb(255, 255, 238);
+    border-radius:4px;
+    display:block;
+    font-size:12px;
+    padding:10px;
+    width:100%;
+    margin-top:10px;
+    margin-bottom:10px;
+    background-color: antiquewhite;
+
+    box-shadow: 2px 2px 4px rgba(165, 42, 42, 0.952);
+    transition:background-color 1s, box-shadow;
+
+}
+
+ /* adding hover effect to input fields */
+
+ .input-control input:hover{
+    box-shadow: 2px 2px 8px rgba(165, 42, 42);
+    background-color: aqua;
+}
+
+.input-control input:focus{
+    padding:15px;
+    box-shadow: 2px 2px 8px rgba(165, 42, 42);
+    background-color: aqua;
+}
+
+.input-control input:focus{
+    outline:0;
+}
+.input-control.success input{
+    border-color:green;
+}
+.input-control.error input{
+    border:4px solid red;
+}
+.input-control .error{
+
+    color:red;
+    margin-bottom:5px;
+    font-size:9px;
+    height: 12px;
+}
